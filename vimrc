@@ -94,7 +94,7 @@ else
 endif
 
 map <C-t> :tabnew<CR>
-map <C-w> :tabclose<CR>
+map <C-d> :tabclose<CR>
 map <C-n> :tabprev<CR>
 map <C-m> :tabnext<CR>
 
