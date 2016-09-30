@@ -89,15 +89,14 @@ set undolevels=700
 "Force NERDTree to open ~/Work (Mac OS) or ~/Documents (Win32) on startup
 if has('win32')
     cd ~/Documents
-elseif has('unixmac')
+else
     cd ~/Work
 endif
 
-let mapleader = "q"
-map <Leader>w :tabclose<CR>
-map <Leader>t :tabnew<CR>
-map <Leader>< :tabprev<CR>
-map <Leader>> :tabprev<CR>
+map <C-t> :tabnew<CR>
+map <C-w> :tabclose<CR>
+map <C-n> :tabprev<CR>
+map <C-m> :tabnext<CR>
 
 "mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 "curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -122,7 +121,7 @@ let g:NERDTreeWinPos = "right"
 "Allows NERDTree to be used in tabs
 "cd ~/.vim/bundle
 "git clone https://github.com/jistr/vim-nerdtree-tabs.git
-map <Leader>e :NERDTreeTabsToggle<CR>
+map <C-e> :NERDTreeTabsToggle<CR>
 
 "==================
 "NERDTree direnter

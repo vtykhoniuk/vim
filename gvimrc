@@ -5,14 +5,13 @@
 "git clone https://github.com/powerline/fonts
 "cd fonts
 "./install.sh
-if has('macunix')
-    "Jump between buffers like between tabs
-    map <D-Left> :tabprev<CR>
-    map <D-Right> :tabnext<CR>
-    set guifont=Literation\ Mono\ \Powerline:h14
-    map <D-e> :NERDTreeTabsToggle<CR>
-elseif has('win32')
+if has('win32')
     set guifont=Sauce_Code_Powerline:h12
     set lines=30
     set columns=120
+else 
+    set guifont=Literation\ Mono\ \Powerline:h14
+    map <D-Left> :tabprev<CR>
+    map <D-Right> :tabnext<CR>
+    map <D-e> :NERDTreeTabsToggle<CR>
 endif
