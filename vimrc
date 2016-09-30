@@ -1,3 +1,8 @@
+if has('win32')
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+endif
+
 "Syntax highlighting
 filetype off
 filetype plugin indent on
@@ -32,14 +37,6 @@ set shiftwidth=4
 "when shifting right, shift to next tab position
 "rather than shift right by shiftwidth
 set shiftround
-
-"Font to be ised in a GUI
-"These are patched fonts for Powerline and Airline plugins
-"cd /tmp
-"git clone https://github.com/powerline/fonts
-"cd fonts
-"./install.sh
-set guifont=Literation\ Mono\ \Powerline:h14
 
 "Selfeplanatory
 set encoding=utf-8
@@ -91,6 +88,12 @@ set undolevels=700
 
 "Force NERDTree to open ~/Work on startup
 cd ~/Work
+
+let mapleader = ","
+map <Leader>w :tabclose<CR>
+map <Leader>t :tabnew<CR>
+map <Leader>< :tabprev<CR>
+map <Leader>> :tabprev<CR>
 
 "mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 "curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
