@@ -122,7 +122,7 @@ let g:NERDTreeWinPos = "right"
 "Allows NERDTree to be used in tabs
 "cd ~/.vim/bundle
 "git clone https://github.com/jistr/vim-nerdtree-tabs.git
-map <D-e> :NERDTreeTabsToggle<CR>
+map <Leader>e :NERDTreeTabsToggle<CR>
 
 "==================
 "NERDTree direnter

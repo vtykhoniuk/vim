@@ -10,6 +10,7 @@ if has('macunix')
     map <D-Left> :tabprev<CR>
     map <D-Right> :tabnext<CR>
     set guifont=Literation\ Mono\ \Powerline:h14
+    map <D-e> :NERDTreeTabsToggle<CR>
 elseif has('win32')
     set guifont=Sauce_Code_Powerline:h12
     set lines=30
