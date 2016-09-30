@@ -93,10 +93,11 @@ else
     cd ~/Work
 endif
 
-map <C-t> :tabnew<CR>
-map <C-d> :tabclose<CR>
-map <C-n> :tabprev<CR>
-map <C-m> :tabnext<CR>
+let mapleader = "\<Space>"
+map <Leader>t :tabnew<CR>
+map <Leader>w :tabclose<CR>
+map <Leader>, :tabprev<CR>
+map <Leader>. :tabnext<CR>
 
 "mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 "curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -121,7 +122,7 @@ let g:NERDTreeWinPos = "right"
 "Allows NERDTree to be used in tabs
 "cd ~/.vim/bundle
 "git clone https://github.com/jistr/vim-nerdtree-tabs.git
-map <C-e> :NERDTreeTabsToggle<CR>
+map <Leader>e :NERDTreeTabsToggle<CR>
 
 "==================
 "NERDTree direnter
