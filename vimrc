@@ -86,10 +86,14 @@ highlight ColorColumn ctermbg=233
 set history=700
 set undolevels=700
 
-"Force NERDTree to open ~/Work on startup
-cd ~/Work
+"Force NERDTree to open ~/Work (Mac OS) or ~/Documents (Win32) on startup
+if has('win32')
+    cd ~/Documents
+elseif has('unixmac')
+    cd ~/Work
+endif
 
-let mapleader = ","
+let mapleader = "q"
 map <Leader>w :tabclose<CR>
 map <Leader>t :tabnew<CR>
 map <Leader>< :tabprev<CR>
