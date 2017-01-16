@@ -1,6 +1,8 @@
 if has('win32')
     source $VIMRUNTIME/mswin.vim
     behave mswin
+    "This makes arrow keys in visual mode behave as expected
+    set keymodel-=stopse
 endif
 
 "Syntax highlighting
@@ -149,6 +151,7 @@ let g:Powerline_symbols='fancy'
 let g:ctrlp_max_height=30
 map <C-b> :CtrlPBuffer<CR>
 set wildignore+=*.pyc
+set wildignore+=*.o
 
 "mkdir ~/.vim/ftplugin && cd ~/.vim/ftplugin
 "wget -O ./python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
@@ -156,17 +159,17 @@ set wildignore+=*.pyc
 set nofoldenable
 
 "git clone https://github.com/klen/python-mode
-let g:pymode_syntax = 1
-let g:pymode_rope_completion = 1
-let g:pymode_indent = 1
-let g:pymode_folding = 1
-let g:pymode_lint = 1
+"let g:pymode_syntax = 1
+"let g:pymode_rope_completion = 1
+"let g:pymode_indent = 1
+"let g:pymode_folding = 1
+"let g:pymode_lint = 1
 "
 " If you prefer the Omni-Completion tip window to close when a selection is
 " made, these lines close it on movement in insert mode or when leaving
 " insert mode
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 "==================
 "vim-airline
